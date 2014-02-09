@@ -1,0 +1,4 @@
+#!/bin/bash
+rsync -rpogtlv --exclude Published/ \
+/Users/iain/Pictures/ \
+/Volumes/[bB]rick*/iain/Pictures/

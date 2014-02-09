@@ -1,0 +1,7 @@
+#!/bin/bash
+# Add n to the list of options to do a dry run
+# Add b to make backups
+
+rsync  -rtpogvKlb --exclude Music/iTunes  --delete  --backup-dir /Volumes/$1/backup --include-from=/Users/iain/bin/excludes /Users/iain/ /Volumes/$1/iain/
+
+# rsync -rtpogvKl  --delete --backup-dir /Volumes/$1/backup /Applications/ /Volumes/$1/Applications/

@@ -1,0 +1,5 @@
+#!/bin/bash
+# Add n to the list of options to do a dry run
+# Add b to make backups
+
+rsync  -rtpogvKlb    --backup-dir /tmp/backup  /Volumes/$1/iain/  /Users/iain/

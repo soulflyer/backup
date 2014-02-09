@@ -1,0 +1,6 @@
+#!/bin/bash
+# Add n to the list of options to do a dry run
+
+rsync -Lrtpvb --size-only --delete --backup-dir /home/iain/backup  /Users/iain/Pictures/Published/ blackbook.local:Pictures/Published
+
+rsync -Lrtpvb --delete --backup-dir /home/iain/backup /Users/iain/Documents/books/ blackbook.local:Documents
