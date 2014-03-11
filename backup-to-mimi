@@ -2,8 +2,8 @@
 # Add n to the list of options to do a dry run
 
 # Pull stuff from the Music directory on mimi first
-rsync -rtpogvKlb --exclude=iTunes/ mimi.local:/Users/iain/Music/ /Users/iain/Music/
+rsync -rtpogvKlb  mimi.local:/Users/iain/Music/ /Users/iain/Music/
 
 rsync -rtpogvKlbi --delete --backup-dir /Users/iain/backup --include-from=/Users/iain/bin/excludes  /Users/iain/ mimi.local:
 
-rsync -vai --delete /Volumes/Silver/ mimi.local:/OfflinePhotos
+rsync -vai --delete /Volumes/Brick2/OfflinePhotos/ mimi.local:/OfflinePhotos

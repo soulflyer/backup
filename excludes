@@ -1,0 +1,40 @@
+- /.Trash/
+- /.spotflux/
+- /Downloads/
+- /Movies/
+- /Videos/
+- /Music/SooperLooper/
+- iPod*
+- /.wine/
+- /Desktop/
+- /Applications/
+- /backup/
+- /Library/
+- /Library/Caches/
+- /Library/Mail/
+- /Library/Preferences/
+- /Library/Logs/
+- /Library/Safari/***
+- /Library/Calendars/***
+- /Library/Application\ Support/Google/***
+- /Library/Application\ Support/Transmission/***
+- /Library/Application\ Support/Mozilla/***
+- /Library/Application\ Support/Skype/***
+- /Library/Application\ Support/Firefox/***
+- /Library/Application\ Support/Adobe/***
+- /Library/Saved\ Application\ State/***
+- /Library/Application\ Support/SyncServices/***
+- /Library/Application\ Support/MobileSync/***
+- /Library/Application\ Support/AddressBook/***
+- /Library/Application\ Support/iPhone\ Simulator/***
+- /Library/Application\ Support/iLifeAssetManagement/***
+- /Library/Developer/Xcode/iOS DeviceSupport/***
+- /Library/Audio/
+- Old.aplibrary/
+- /.rvm/
+- /.tmux.default
+- .tmux
+- /.tmux.startup
+- Caches
+- /Packages
+- /Sites
