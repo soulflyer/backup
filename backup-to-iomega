@@ -2,4 +2,4 @@
 rsync -vai --delete  \
     --exclude=.Trash --exclude=Library --exclude=Downloads --exclude=Movies \
      ~ /Volumes/Iomega/
-rsync -vai --delete  /Volumes/Silver/ /Volumes/Iomega/OfflinePhotos
+rsync -vai --delete  /Volumes/Brick2/OfflinePhotos/ /Volumes/Iomega/OfflinePhotos
