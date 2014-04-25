@@ -4,4 +4,6 @@
 
 rsync -vaik  /Users/iain/Pictures/Published/thumbs/ jphuquoc@soulflyer.co.uk:Pictures/thumbs/
 
+rsync -vaik --partial /Users/iain/Pictures/divephotos/ jphuquoc@Soulflyer.co.uk:Pictures/divephotos/
+
 rsync -vaik --exclude=masters --exclude=fullsize /Users/iain/Pictures/Published/ jphuquoc@soulflyer.co.uk:Pictures/

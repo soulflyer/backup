@@ -1,6 +1,9 @@
 #!/bin/bash
 # Add n to the list of options to do a dry run
 
+rsync -vai /Users/iain/Pictures/Published/ mimi.local:/Users/iain/Pictures/Published
+rsync -vai /Users/iain/Pictures/divephotos/ mimi.local:/Users/iain/Pictures/divephotos
+
 # Pull stuff from the Music directory on mimi first
 rsync -rtpogvKlb  mimi.local:/Users/iain/Music/ /Users/iain/Music/
 
