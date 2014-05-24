@@ -1,9 +1,12 @@
 #!/bin/bash
 # rsync -Lrtpv --delete --backup-dir /tmp/backup --size-only /Users/iain/Pictures/Published/thumbs/ jphuquoc@soulflyer.co.uk:Pictures/thumbs/
 # rsync -Lrtpv --delete --backup-dir /tmp/backup --size-only /Users/iain/Pictures/Published/medium/ jphuquoc@soulflyer.co.uk:Pictures/medium/
+date
 
-rsync -vaik  /Users/iain/Pictures/Published/thumbs/ jphuquoc@soulflyer.co.uk:Pictures/thumbs/
+rsync -vaik --exclude=.DS_Store /Users/iain/Pictures/Published/thumbs/ jphuquoc@soulflyer.co.uk:Pictures/thumbs/
 
-rsync -vaik --partial /Users/iain/Pictures/divephotos/ jphuquoc@Soulflyer.co.uk:Pictures/divephotos/
+rsync -vaik --exclude=.DS_Store --exclude=masters --exclude=fullsize /Users/iain/Pictures/Published/ jphuquoc@soulflyer.co.uk:Pictures/
 
-rsync -vaik --exclude=masters --exclude=fullsize /Users/iain/Pictures/Published/ jphuquoc@soulflyer.co.uk:Pictures/
+rsync -vaik  --exclude=.DS_Store --exclude=fullsize /Users/iain/Pictures/divephotos/ jphuquoc@soulflyer.co.uk:Pictures/divephotos/
+
+rsync -vaik --partial  --exclude=.DS_Store /Users/iain/Pictures/divephotos/ jphuquoc@Soulflyer.co.uk:Pictures/divephotos/
