@@ -1,12 +1,19 @@
 #!/bin/bash
-# rsync -Lrtpv --delete --backup-dir /tmp/backup --size-only /Users/iain/Pictures/Published/thumbs/ jphuquoc@soulflyer.co.uk:Pictures/thumbs/
-# rsync -Lrtpv --delete --backup-dir /tmp/backup --size-only /Users/iain/Pictures/Published/medium/ jphuquoc@soulflyer.co.uk:Pictures/medium/
+echo "**********************************"
 date
+echo "**********************************"
+echo "Backing up Pictures/Published/thumbs"
+rsync -vaik --exclude=.DS_Store --exclude=.sass-cache\
+    /Users/iain/Pictures/Published/thumbs/ \
+    jphuquoc@soulflyer.co.uk:Pictures/thumbs/
+#echo "Backing up medium"
+#rsync -vaik --exclude=.DS_Store /Users/iain/Pictures/Published/medium/ jphuquoc@soulflyer.co.uk:Pictures/medium/
+echo "backing up Pictures/Published"
+rsync -vaiLk --exclude=.DS_Store \
+    --exclude=.sass-cache --exclude=masters --exclude=fullsize \
+    /Users/iain/Pictures/Published/ \
+    jphuquoc@soulflyer.co.uk:Pictures/
 
-rsync -vaik --exclude=.DS_Store /Users/iain/Pictures/Published/thumbs/ jphuquoc@soulflyer.co.uk:Pictures/thumbs/
-
-rsync -vaik --exclude=.DS_Store --exclude=masters --exclude=fullsize /Users/iain/Pictures/Published/ jphuquoc@soulflyer.co.uk:Pictures/
-
-rsync -vaik  --exclude=.DS_Store --exclude=fullsize /Users/iain/Pictures/divephotos/ jphuquoc@soulflyer.co.uk:Pictures/divephotos/
-
-rsync -vaik --partial  --exclude=.DS_Store /Users/iain/Pictures/divephotos/ jphuquoc@Soulflyer.co.uk:Pictures/divephotos/
+rsync -vaik  --exclude=.DS_Store --exclud=.sass-cache \
+    /Users/iain/Pictures/divephotos/ \
+    jphuquoc@soulflyer.co.uk:Pictures/divephotos/

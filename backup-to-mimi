@@ -1,12 +1,14 @@
 #!/bin/bash
 # Add n to the list of options to do a dry run
-
+echo "backing up Pictures/Published"
 rsync -vai /Users/iain/Pictures/Published/ mimi.local:/Users/iain/Pictures/Published
+echo "backing up Pictures/divephotos"
 rsync -vai /Users/iain/Pictures/divephotos/ mimi.local:/Users/iain/Pictures/divephotos
 
 # Pull stuff from the Music directory on mimi first
+echo "fetching music stuff from mimi"
 rsync -rtpogvKlb  mimi.local:/Users/iain/Music/ /Users/iain/Music/
-
-rsync -rtpogvKlbi --delete --backup-dir /Users/iain/backup --include-from=/Users/iain/bin/excludes  /Users/iain/ mimi.local:
-
+echo "backing up home directory"
+rsync -vailK  --include-from=/Users/iain/bin/excludes  /Users/iain/ mimi.local:
+echo "backing up OfflinePhotos"
 rsync -vai --delete /Volumes/Brick2/OfflinePhotos/ mimi.local:/OfflinePhotos
