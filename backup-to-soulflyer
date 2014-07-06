@@ -13,7 +13,7 @@ rsync -vaiLk --exclude=.DS_Store \
     --exclude=.sass-cache --exclude=masters --exclude=fullsize \
     /Users/iain/Pictures/Published/ \
     jphuquoc@soulflyer.co.uk:Pictures/
-
-rsync -vaik  --exclude=.DS_Store --exclud=.sass-cache \
+echo "backing up divephotos"
+rsync -vaik  --exclude=.DS_Store --exclude=.sass-cache \
     /Users/iain/Pictures/divephotos/ \
     jphuquoc@soulflyer.co.uk:Pictures/divephotos/

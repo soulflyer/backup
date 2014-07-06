@@ -4,6 +4,8 @@ echo "backing up Pictures/Published"
 rsync -vai /Users/iain/Pictures/Published/ mimi.local:/Users/iain/Pictures/Published
 echo "backing up Pictures/divephotos"
 rsync -vai /Users/iain/Pictures/divephotos/ mimi.local:/Users/iain/Pictures/divephotos
+echo "backing up master copies"
+rsync -vai /Users/iain/Pictures/Photos/ mimi.local:/Users/iain/Pictures/Photos
 
 # Pull stuff from the Music directory on mimi first
 echo "fetching music stuff from mimi"
