@@ -6,8 +6,8 @@ echo "Backing up Pictures/Published/thumbs"
 rsync -vaik --exclude=.DS_Store --exclude=.sass-cache\
     /Users/iain/Pictures/Published/thumbs/ \
     jphuquoc@soulflyer.co.uk:Pictures/thumbs/
-#echo "Backing up medium"
-#rsync -vaik --exclude=.DS_Store /Users/iain/Pictures/Published/medium/ jphuquoc@soulflyer.co.uk:Pictures/medium/
+echo "Backing up medium"
+rsync -vaik --exclude=.DS_Store /Users/iain/Pictures/Published/medium/ jphuquoc@soulflyer.co.uk:Pictures/medium/
 echo "backing up Pictures/Published"
 rsync -vaiLk --exclude=.DS_Store \
     --exclude=.sass-cache --exclude=masters --exclude=fullsize \
