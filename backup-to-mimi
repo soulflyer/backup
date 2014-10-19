@@ -13,4 +13,4 @@ rsync -rtpogvKlb  mimi.local:/Users/iain/Music/ /Users/iain/Music/
 echo "backing up home directory"
 rsync -vailK  --include-from=/Users/iain/bin/excludes  /Users/iain/ mimi.local:
 echo "backing up OfflinePhotos"
-rsync -vai --delete /Volumes/Brick2/OfflinePhotos/ mimi.local:/OfflinePhotos
+rsync -vai --delete /Volumes/Sony2T/OfflinePhotos/ mimi.local:/OfflinePhotos

@@ -3,7 +3,6 @@
 - /Downloads/
 - /Movies/
 - /Videos/
-- /Music/SooperLooper/
 - iPod*
 - /.wine/
 - /Desktop/
@@ -32,10 +31,6 @@
 - /Library/Audio/
 - Old.aplibrary/
 - /.rvm/
-- /.tmux.default
-- .tmux
-- /.tmux.startup
 - Caches
 - /Packages
-- /Sites
 - /VirtualBox*

@@ -4,4 +4,4 @@ rsync -vai  \
     --exclude=.Trash --exclude=Library --exclude=Downloads \
     --exclude=Movies --exclude=Desktop --exclude=VirtualBox* \
      ~ /Volumes/Iomega/
-rsync -vai  /Volumes/Brick2/OfflinePhotos/ /Volumes/Iomega/OfflinePhotos
+rsync -vai  /Volumes/Sony2T/OfflinePhotos/ /Volumes/Iomega/OfflinePhotos
