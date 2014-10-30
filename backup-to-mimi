@@ -1,16 +1,16 @@
 #!/bin/bash
 # Add n to the list of options to do a dry run
 echo "backing up Pictures/Published"
-rsync -vai /Users/iain/Pictures/Published/ mimi.local:/Users/iain/Pictures/Published
+rsync -vai $@ /Users/iain/Pictures/Published/ mimi.local:/Users/iain/Pictures/Published
 echo "backing up Pictures/divephotos"
-rsync -vai /Users/iain/Pictures/divephotos/ mimi.local:/Users/iain/Pictures/divephotos
+rsync -vai $@ /Users/iain/Pictures/divephotos/ mimi.local:/Users/iain/Pictures/divephotos
 echo "backing up master copies"
-rsync -vai /Users/iain/Pictures/Photos/ mimi.local:/Users/iain/Pictures/Photos
+rsync -vai $@ /Users/iain/Pictures/Photos/ mimi.local:/Users/iain/Pictures/Photos
 
 # Pull stuff from the Music directory on mimi first
 echo "fetching music stuff from mimi"
 rsync -rtpogvKlb  mimi.local:/Users/iain/Music/ /Users/iain/Music/
 echo "backing up home directory"
-rsync -vailK  --include-from=/Users/iain/bin/excludes  /Users/iain/ mimi.local:
+rsync -vailK --include-from=/Users/iain/bin/excludes $@ /Users/iain/ mimi.local:
 echo "backing up OfflinePhotos"
-rsync -vai --delete /Volumes/Sony2T/OfflinePhotos/ mimi.local:/OfflinePhotos
+rsync -vai --delete $@ /Volumes/Sony2T/OfflinePhotos/ mimi.local:/OfflinePhotos
