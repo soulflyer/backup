@@ -2,6 +2,11 @@
 echo "**********************************"
 date
 echo "**********************************"
+echo "Backing up Pictures/Published/json"
+rsync -vaik --exclude=.DS_Store \
+    /Users/iain/Pictures/Published/json/ \
+    jphuquoc@soulflyer.co.uk:Pictures/json/
+
 echo "Backing up Pictures/Published/thumbs"
 rsync -vaik --exclude=.DS_Store --exclude=.sass-cache\
     /Users/iain/Pictures/Published/thumbs/ \
