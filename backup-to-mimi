@@ -12,6 +12,8 @@ rsync -vaib  --delete --backup-dir=$BACKUPDIR $@ /Users/iain/Pictures/Photos/ mi
 echo "fetching music stuff from mimi"
 rsync -rtpogvKlb --backup-dir=/Users/iain/backupMusic/Music mimi.local:/Users/iain/Music/ /Users/iain/Music/
 echo "backing up home directory"
+# OfflinePhotos is excluded (see excludes file) so that the link is not overwritten
+# has to be this way to allow for different external disks
 rsync -vailKb --delete --backup-dir=$BACKUPDIR --include-from=/Users/iain/bin/excludes $@ /Users/iain/ mimi.local:
 echo "backing up OfflinePhotos"
-rsync -vaib --delete --backup-dir=$BACKUPDIR $@ /Volumes/Sony2T/OfflinePhotos/ mimi.local:/OfflinePhotos
+rsync -vaib --delete --backup-dir=$BACKUPDIR $@ /Volumes/Sony2T/OfflinePhotos/ mimi.local:/Users/iain/Pictures/OfflinePhotos

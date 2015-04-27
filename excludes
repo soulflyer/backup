@@ -36,3 +36,5 @@
 - /VirtualBox*
 - iTunes/
 - /backup/
+- /Pictures/OfflinePhotos
+- /.dropbox/
