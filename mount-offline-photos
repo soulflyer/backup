@@ -3,3 +3,8 @@ DISK=$1
 cd ~/Pictures
 rm OfflinePhotos
 ln -s "/Volumes/$DISK/OfflinePhotos" OfflinePhotos
+rm Photos
+ln -s "/Volumes/$DISK/Photos" Photos
+cd ~
+rm backup
+ln -s "/Volumes/$DISK/backup" backup

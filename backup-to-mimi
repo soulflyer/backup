@@ -1,16 +1,17 @@
 #!/bin/bash
 # Add n to the list of options to do a dry run
+BACKUPDIR=/Users/iain/backup
 echo "backing up Pictures/Published"
-rsync -vaib  --delete --backup-dir=/Volumes/BlackBox/backup $@ /Users/iain/Pictures/Published/ mimi.local:/Users/iain/Pictures/Published
+rsync -vaib  --delete --backup-dir=$BACKUPDIR $@ /Users/iain/Pictures/Published/ mimi.local:/Users/iain/Pictures/Published
 echo "backing up Pictures/divephotos"
-rsync -vaib  --delete --backup-dir=/Volumes/BlackBox/backup $@ /Users/iain/Pictures/divephotos/ mimi.local:/Users/iain/Pictures/divephotos
+rsync -vaib  --delete --backup-dir=$BACKUPDIR $@ /Users/iain/Pictures/divephotos/ mimi.local:/Users/iain/Pictures/divephotos
 echo "backing up master copies"
-rsync -vaib  --delete --backup-dir=/Volumes/BlackBox/backup $@ /Users/iain/Pictures/Photos/ mimi.local:/Users/iain/Pictures/Photos
+rsync -vaib  --delete --backup-dir=$BACKUPDIR $@ /Users/iain/Pictures/Photos/ mimi.local:/Users/iain/Pictures/Photos
 
 # Pull stuff from the Music directory on mimi first
 echo "fetching music stuff from mimi"
-rsync -rtpogvKlb --backup-dir=/Users/iain/backup/Music mimi.local:/Users/iain/Music/ /Users/iain/Music/
+rsync -rtpogvKlb --backup-dir=/Users/iain/backupMusic/Music mimi.local:/Users/iain/Music/ /Users/iain/Music/
 echo "backing up home directory"
-rsync -vailKb --delete --backup-dir=/Volumes/BlackBox/backup --include-from=/Users/iain/bin/excludes $@ /Users/iain/ mimi.local:
+rsync -vailKb --delete --backup-dir=$BACKUPDIR --include-from=/Users/iain/bin/excludes $@ /Users/iain/ mimi.local:
 echo "backing up OfflinePhotos"
-rsync -vaib --delete --backup-dir=/Volumes/BlackBox/backup $@ /Volumes/Sony2T/OfflinePhotos/ mimi.local:/OfflinePhotos
+rsync -vaib --delete --backup-dir=$BACKUPDIR $@ /Volumes/Sony2T/OfflinePhotos/ mimi.local:/OfflinePhotos
