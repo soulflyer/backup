@@ -1,0 +1,5 @@
+#!/bin/bash
+DISK=$1
+cd ~/Pictures
+rm OfflinePhotos
+ln -s "/Volumes/$DISK/OfflinePhotos" OfflinePhotos
