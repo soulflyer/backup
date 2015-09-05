@@ -1,0 +1,8 @@
+#!/bin/bash
+# backup home directory to external storage
+rsync -vai \
+    --exclude=.Trash --exclude=Library --exclude=Downloads \
+    --exclude=Copy --exclude=Dropbox --exclude=iTunes \
+    --exclude=Pictures/Published \
+    --exclude=Movies --exclude=Desktop --exclude=VirtualBox* $@ \
+    ~ /Volumes/Sony2T/

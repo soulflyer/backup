@@ -1,0 +1,2 @@
+#!/bin/bash
+rsync -rpogtlv /Users/iain/Documents/books/bookshelf/ /Volumes/GALAXY/books/
