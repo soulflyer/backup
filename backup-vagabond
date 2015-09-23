@@ -1,0 +1,4 @@
+#!/bin/bash
+# For now, just backup the masters. Figure out what to do with
+# the processed pics later
+rsync -vai /home/iain/Pictures/NewMasters/ mimi.local:/Users/iain/Pictures/NewMasters
