@@ -1,0 +1,15 @@
+Pictures/Published
+Pictures/Photos
+Movies
+Music/iTunes
+.cache
+.gradle
+.cordova
+.dropbox
+.m2
+.android
+.meteor
+.node-gyp
+.npm
+.Genymobile
+.rvm
