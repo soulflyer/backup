@@ -3,8 +3,8 @@
 BACKUPDIR=/Users/iain/backup
 echo "backing up Pictures/Published"
 rsync -vaib  --delete --backup-dir=$BACKUPDIR $@ /Users/iain/Pictures/Published/ mimi.local:/Users/iain/Pictures/Published
-echo "backing up Pictures/divephotos"
-rsync -vaib  --delete --backup-dir=$BACKUPDIR $@ /Users/iain/Pictures/divephotos/ mimi.local:/Users/iain/Pictures/divephotos
+# echo "backing up Pictures/divephotos"
+# rsync -vaib  --delete --backup-dir=$BACKUPDIR $@ /Users/iain/Pictures/divephotos/ mimi.local:/Users/iain/Pictures/divephotos
 echo "backing up master copies"
 rsync -vaib  --delete --backup-dir=$BACKUPDIR $@ /Users/iain/Pictures/Photos/ mimi.local:/Users/iain/Pictures/Photos
 

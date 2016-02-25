@@ -1,0 +1,9 @@
+#!/bin/bash
+# Add n to the list of options to do a dry run
+SRC=/Volumes/Blue
+DEST=/Volumes/$1
+BACKUPDIR=$DEST/backup
+echo "backing up OfflinePhotos from " $SRC " to " $DEST
+rsync -vaib --delete --backup-dir=$BACKUPDIR $SRC/OfflinePhotos/ $DEST/OfflinePhotos
+echo "backing up OtherPeoplesPhotos from " $SRC " to " $DEST
+rsync -vaib --delete --backup-dir=$BACKUPDIR $SRC/OtherPeoplesPics/ $DEST/OtherPeoplesPics
