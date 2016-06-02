@@ -16,4 +16,4 @@ echo "backing up home directory"
 # has to be this way to allow for different external disks
 rsync -vailKb --delete --backup-dir=$BACKUPDIR --include-from=/Users/iain/bin/excludes $@ /Users/iain/ mimi.local:
 echo "backing up OfflinePhotos"
-rsync -vaib --delete --backup-dir=$BACKUPDIR $@ /Volumes/Sony2T/OfflinePhotos/ mimi.local:/Users/iain/Pictures/OfflinePhotos
+rsync -vaib --delete --backup-dir=$BACKUPDIR $@ /Volumes/Blue/OfflinePhotos/ mimi.local:/Users/iain/Pictures/OfflinePhotos
