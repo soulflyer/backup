@@ -1,6 +1,6 @@
 #!/bin/bash
 # Add n to the list of options to do a dry run
-BACKUPDIR=/Users/iain/backup
+BACKUPDIR=/Volumes/Seagate/backup
 echo "backing up Pictures/Published"
 rsync -vaib  --delete --backup-dir=$BACKUPDIR $@ /Users/iain/Pictures/Published/ mimi.local:/Users/iain/Pictures/Published
 # echo "backing up Pictures/divephotos"
