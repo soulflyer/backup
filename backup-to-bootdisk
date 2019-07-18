@@ -1,0 +1,8 @@
+#!/bin/bash
+# Add n to the list of options to do a dry run
+# Add b to make backups
+
+rsync  -rtpogvKlb  --delete  --backup-dir /Volumes/$1/backup --include-from=/Users/iain/bin/bootdisk-excludes --exclude=Pictures /Users/iain/ /Volumes/$1/Users/iain/
+
+rsync -rtpogvKlb --delete --exclude=Android\ Studio.app  /Applications/ /Volumes/$1/Applications/
+# rsync -rtpogvKl  --delete --backup-dir /Volumes/$1/backup /Applications/ /Volumes/$1/Applications/

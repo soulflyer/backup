@@ -15,5 +15,11 @@ echo "backing up home directory"
 # OfflinePhotos is excluded (see excludes file) so that the link is not overwritten
 # has to be this way to allow for different external disks
 rsync -vailKb --delete --backup-dir=$BACKUPDIR --include-from=/Users/iain/bin/excludes $@ /Users/iain/ mimi.local:
+# Had to add the -K option to get it to follow the symbolic link for
+# iTunes-Media/Music. Not sure why the other ones don't need this.
+# Maybe rsync andles a symbolic link at the top level differently to
+# one it finds inside the directory being backed up.
+echo "backing up music"
+rsync -vaibK --delete --backup-dir=$BACKUPDIR --exclude="Mobile?Applications" $@ /Users/iain/Music/iTunes/iTunes-Media/ mimi.local:/Users/iain/Music/iTunes/iTunes-Media
 echo "backing up OfflinePhotos"
 rsync -vaib --delete --backup-dir=$BACKUPDIR $@ /Volumes/Blue/OfflinePhotos/ mimi.local:/Users/iain/Pictures/OfflinePhotos
