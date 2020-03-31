@@ -1,5 +1,7 @@
 - Pictures/Published
 - Pictures/Photos
+- Pictures/OfflinePhotos
+- Pictures/OtherPeoplesPics
 - Movies
 - Music/iTunes
 - .cache
@@ -13,3 +15,18 @@
 - .npm
 - .Genymobile
 - .rvm
+- .nvm
+- .Trash
+- Documents/books/bookshelf
+- Library/Caches
+- .Trash
+- .tmux/resurrect/
+- .logs
+- Library/Application Support/Dash/
+- Library/Application Support/Google/Chrome/
+- library/Application Support/Google/GoogleSoftwareUpdate/
+- Library/Application Support/Google/Drive/
+- Library/Application Support/Kindle/
+- Library/Application Support/MobileSync/Backup/
+- Library/Containers/com.docker.docker/Data/
+- Library/Mail/

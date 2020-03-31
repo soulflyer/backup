@@ -1,25 +1,36 @@
 #!/bin/bash
 # Add n to the list of options to do a dry run
-BACKUPDIR=/Volumes/Seagate/backup
+BACKUPDIR=/media/seagate/backup
+MIMI="mimi"
+REMOTEHOMEDIR=/home/iain
+REMOTEPICDIR=$REMOTEHOMEDIR/Pictures
+REMOTEMUSICDIR=$REMOTEHOMEDIR/Music
+REMOTEMACHOMEDIR=/Users/iain
 echo "backing up Pictures/Published"
-rsync -vaib  --delete --backup-dir=$BACKUPDIR $@ /Users/iain/Pictures/Published/ mimi.local:/Users/iain/Pictures/Published
+# rsync -vaib  --delete --backup-dir=$BACKUPDIR $@ /Users/iain/Pictures/Published/ $MIMI:$REMOTEPICDIR/Published
+
 # echo "backing up Pictures/divephotos"
 # rsync -vaib  --delete --backup-dir=$BACKUPDIR $@ /Users/iain/Pictures/divephotos/ mimi.local:/Users/iain/Pictures/divephotos
 echo "backing up master copies"
-rsync -vaib  --delete --backup-dir=$BACKUPDIR $@ /Users/iain/Pictures/Photos/ mimi.local:/Users/iain/Pictures/Photos
+rsync -vaib  --delete --backup-dir=$BACKUPDIR $@ /Users/iain/Pictures/Photos/ $MIMI:$REMOTEPICDIR/Photos
+# rsync -vai $@ /Users/iain/Pictures/Photos/ $MIMI:$REMOTEPICDIR/Photos
 
 # Pull stuff from the Music directory on mimi first
 # echo "fetching music stuff from mimi"
 # rsync -rtpogvKlb --backup-dir=/Users/iain/backupMusic/Music mimi.local:/Users/iain/Music/ /Users/iain/Music/
 echo "backing up home directory"
+echo "Reboot mimi in OSX first then run:"
+echo "rsync -vailKb --delete --backup-dir=/tmp --include-from=/Users/iain/Code/backup/home-excludes  /Users/iain/ mimi:/Users/iain"
 # OfflinePhotos is excluded (see excludes file) so that the link is not overwritten
 # has to be this way to allow for different external disks
-rsync -vailKb --delete --backup-dir=$BACKUPDIR --include-from=/Users/iain/bin/excludes $@ /Users/iain/ mimi.local:
+# rsync -vailKb --delete --backup-dir=$BACKUPDIR --include-from=/Users/iain/Code/backup/home-excludes $@ /Users/iain/ $MIMI:$REMOTEMACHOMEDIR
+
 # Had to add the -K option to get it to follow the symbolic link for
 # iTunes-Media/Music. Not sure why the other ones don't need this.
 # Maybe rsync andles a symbolic link at the top level differently to
 # one it finds inside the directory being backed up.
 echo "backing up music"
-rsync -vaibK --delete --backup-dir=$BACKUPDIR --exclude="Mobile?Applications" $@ /Users/iain/Music/iTunes/iTunes-Media/ mimi.local:/Users/iain/Music/iTunes/iTunes-Media
+rsync -vaibK --delete --backup-dir=$BACKUPDIR --exclude="Mobile?Applications" $@ /Users/iain/Music/iTunes/iTunes-Media/Music/ $MIMI:$REMOTEMUSICDIR
 echo "backing up OfflinePhotos"
-rsync -vaib --delete --backup-dir=$BACKUPDIR $@ /Volumes/Blue/OfflinePhotos/ mimi.local:/Users/iain/Pictures/OfflinePhotos
+rsync -vaib --delete --backup-dir=$BACKUPDIR $@ /Volumes/Blue/OfflinePhotos/ $MIMI:$REMOTEPICDIR/OfflinePhotos
+# rsync -vai  $@ /Volumes/Blue/OfflinePhotos/ $MIMI:$REMOTEPICDIR/OfflinePhotos

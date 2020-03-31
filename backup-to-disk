@@ -4,5 +4,5 @@
 
 rsync  -rtpogvKlb  --delete  --backup-dir /Volumes/$1/backup --include-from=/Users/iain/bin/excludes --exclude=Pictures /Users/iain/ /Volumes/$1/iain/
 
-rsync -rtpogvKlb --delete --backup-dir /Volumes/$1/applications-backup /Applications/ /Volumes/$1/Applications/
+# rsync -rtpogvKlb --delete --backup-dir /Volumes/$1/applications-backup /Applications/ /Volumes/$1/Applications/
 # rsync -rtpogvKl  --delete --backup-dir /Volumes/$1/backup /Applications/ /Volumes/$1/Applications/
