@@ -5,6 +5,8 @@ MIMI="mimi"
 REMOTEHOMEDIR=/home/iain
 REMOTEPICDIR=$REMOTEHOMEDIR/Pictures
 REMOTEMUSICDIR=$REMOTEHOMEDIR/Music
+REMOTEBOOKSHELF=/media/seagate/bookshelf
+BOOKSHELF=~/Documents/books/bookshelf/
 REMOTEMACHOMEDIR=/Users/iain
 echo "backing up Pictures/Published"
 # rsync -vaib  --delete --backup-dir=$BACKUPDIR $@ /Users/iain/Pictures/Published/ $MIMI:$REMOTEPICDIR/Published
@@ -30,7 +32,9 @@ echo "rsync -vailKb --delete --backup-dir=/tmp --include-from=/Users/iain/Code/b
 # Maybe rsync andles a symbolic link at the top level differently to
 # one it finds inside the directory being backed up.
 echo "backing up music"
-rsync -vaibK --delete --backup-dir=$BACKUPDIR --exclude="Mobile?Applications" $@ /Users/iain/Music/iTunes/iTunes-Media/Music/ $MIMI:$REMOTEMUSICDIR
+rsync -vaibK --delete --backup-dir=$BACKUPDIR --exclude="Mobile?Applications" $@ /Users/iain/Music/Collection/ $MIMI:$REMOTEMUSICDIR
 echo "backing up OfflinePhotos"
 rsync -vaib --delete --backup-dir=$BACKUPDIR $@ /Volumes/Blue/OfflinePhotos/ $MIMI:$REMOTEPICDIR/OfflinePhotos
 # rsync -vai  $@ /Volumes/Blue/OfflinePhotos/ $MIMI:$REMOTEPICDIR/OfflinePhotos
+echo "backing up books"
+rsync -vaib --delete --backup-dir=$BACKUPDIR $@ $BOOKSHELF $MIMI:$REMOTEBOOKSHELF

@@ -2,7 +2,9 @@
 # Add n to the list of options to do a dry run
 # Add b to make backups
 
-rsync  -rtpogvKlb  --delete  --backup-dir /Volumes/$1/backup --include-from=/Users/iain/bin/excludes --exclude=Pictures /Users/iain/ /Volumes/$1/iain/
+rsync  -rtpogvKlb $2  --delete  --backup-dir /Volumes/$1/backup --include-from=/Users/iain/bin/excludes  /Users/iain/ /Volumes/$1/iain/
+# rsync  -rtpogvKlb  --delete  --backup-dir /Volumes/$1/backup --include-from=/Users/iain/bin/excludes --exclude=Pictures /Users/iain/ /Volumes/$1/iain/
 
+rsync -rtpogvKl $2 --delete /usr/local /Volumes/$1/usr-local
 # rsync -rtpogvKlb --delete --backup-dir /Volumes/$1/applications-backup /Applications/ /Volumes/$1/Applications/
 # rsync -rtpogvKl  --delete --backup-dir /Volumes/$1/backup /Applications/ /Volumes/$1/Applications/

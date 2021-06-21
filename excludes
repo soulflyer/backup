@@ -1,35 +1,51 @@
 - /.Trash/
-- /.spotflux/
-- /Downloads/
-- /Movies/
-- /Videos/
-- iPod*
-- /Desktop/
-- /Applications/
-- /backup/
-- /Library/
-- Old.aplibrary/
+
 - /.rvm/
-- Caches
-- /Packages
+- Caches/
+- Cache/
+- cache/
+- .cache/
+- .aot_cache/
+- http-cache/
+- compile-cache/
+- tmp/
+- /.cpan/
+- elpa/
 - /VirtualBox*
 - /backup/
-- /Pictures/OfflinePhotos
-- /.dropbox/
-- /Music/iTunes/
-- Vuze*
-- .Genymobile
-- .android
-- .cordova
-- .gradle
-- .npm
-- .m2
+
+- /Library/Containers/
+- /Library/Application?Support/Dash/DocSets/
+- /Library/Address?Book?Plug-Ins/
+- Docker.raw
+
+- /.Genymobile
+- /.android
+- /.cordova
+- /.gradle
+- /.npm
+- /.m2
+- /.nvm
 - /Mail/
-- /Code/WiseRobot/
-- Pictures/Aperture?Library.aplibrary
-- /.cache
-- /.wine-old/
-+ /Code/
-+ /Code/profile/
-+ /Code/profile/*
-- /Code/*
+
+- /Pictures/Aperture?Library.aplibrary
+- /backup/
+- /Pictures/OfflinePhotos
+
+# This bit for backing up to Mimi
+# - /Pictures/Published
+# - /Pictures/Photos
+# - /Library/
+# - /Downloads/stuff/
+# - /Downloads/Battlestar.Galactica.Season.3/
+# - /Downloads/DOCTOR?WHO?CLASSIC?S01e00-42?+?EXTRA/
+# - /.ghcup
+# - /Code/
+# - /Music/Collection/
+# - /Music/iTunes/
+
+# This bit shows how to sync only one subdir without using a separate rsync command
+# + /Code/
+# + /Code/profile/
+# + /Code/profile/*
+# - /Code/*
