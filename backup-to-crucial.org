@@ -1,0 +1,51 @@
+* Sync to external SSD for acceptance
+
+** From Subversion to Acceptance
+#+begin_src shell
+  RSYNC_OPTIONS="-vaib"
+  rsync $RSYNC_OPTIONS /Volumes/Blue/OfflinePhotos/ /Volumes/Crucial/OfflinePhotos
+  rsync $RSYNC_OPTIONS /Users/iain/Documents/books/bookshelf/ /Volumes/Crucial/bookshelf
+  rsync $RSYNC_OPTIONS /Users/iain/Music/Collection/ /Volumes/Crucial/Collection
+#+end_src
+
+#+RESULTS:
+| building  | file      | list  | ...           | done       |       |           |           |         |              |         |         |               |               |               |             |          |
+| >f..t.... | .DS_Store |       |               |            |       |           |           |         |              |         |         |               |               |               |             |          |
+|           |           |       |               |            |       |           |           |         |              |         |         |               |               |               |             |          |
+| sent      | 1382902   | bytes | received      | 26         | bytes | 921952.0  | bytes/sec |         |              |         |         |               |               |               |             |          |
+| total     | size      | is    | 1202000543916 | speedup    | is    | 869170.73 |           |         |              |         |         |               |               |               |             |          |
+| building  | file      | list  | ...           | done       |       |           |           |         |              |         |         |               |               |               |             |          |
+|           |           |       |               |            |       |           |           |         |              |         |         |               |               |               |             |          |
+| sent      | 546252    | bytes | received      | 20         | bytes | 364181.33 | bytes/sec |         |              |         |         |               |               |               |             |          |
+| total     | size      | is    | 58462305058   | speedup    | is    | 107020.5  |           |         |              |         |         |               |               |               |             |          |
+| building  | file      | list  | ...           | done       |       |           |           |         |              |         |         |               |               |               |             |          |
+| cd+++++++ | Temple    | of    | the           | Dog/       |       |           |           |         |              |         |         |               |               |               |             |          |
+| cd+++++++ | Temple    | of    | the           | Dog/Temple | Of    | The       | Dog       | (Deluxe | Edition)/    |         |         |               |               |               |             |          |
+| >f+++++++ | Temple    | of    | the           | Dog/Temple | Of    | The       | Dog       | (Deluxe | Edition)/01. | Say     | Hello   | 2             | Heaven        | (25th         | Anniversary | Mix).mp3 |
+| >f+++++++ | Temple    | of    | the           | Dog/Temple | Of    | The       | Dog       | (Deluxe | Edition)/01. | Say     | Hello   | 2             | Heaven        | (Demo).mp3    |             |          |
+| >f+++++++ | Temple    | of    | the           | Dog/Temple | Of    | The       | Dog       | (Deluxe | Edition)/02. | Reach   | Down    | (25th         | Anniversary   | Mix).mp3      |             |          |
+| >f+++++++ | Temple    | of    | the           | Dog/Temple | Of    | The       | Dog       | (Deluxe | Edition)/02. | Reach   | Down    | (Demo).mp3    |               |               |             |          |
+| >f+++++++ | Temple    | of    | the           | Dog/Temple | Of    | The       | Dog       | (Deluxe | Edition)/03. | Call    | Me      | A             | Dog           | (Demo).mp3    |             |          |
+| >f+++++++ | Temple    | of    | the           | Dog/Temple | Of    | The       | Dog       | (Deluxe | Edition)/03. | Hunger  | Strike  | (25th         | Anniversary   | Mix).mp3      |             |          |
+| >f+++++++ | Temple    | of    | the           | Dog/Temple | Of    | The       | Dog       | (Deluxe | Edition)/04. | Pushin' | Forward | Back          | (25th         | Anniversary   | Mix).mp3    |          |
+| >f+++++++ | Temple    | of    | the           | Dog/Temple | Of    | The       | Dog       | (Deluxe | Edition)/04. | Times   | Of      | Trouble       | (Demo).mp3    |               |             |          |
+| >f+++++++ | Temple    | of    | the           | Dog/Temple | Of    | The       | Dog       | (Deluxe | Edition)/05. | Angel   | Of      | Fire          | (Demo).mp3    |               |             |          |
+| >f+++++++ | Temple    | of    | the           | Dog/Temple | Of    | The       | Dog       | (Deluxe | Edition)/05. | Call    | Me      | A             | Dog           | (25th         | Anniversary | Mix).mp3 |
+| >f+++++++ | Temple    | of    | the           | Dog/Temple | Of    | The       | Dog       | (Deluxe | Edition)/06. | Black   | Cat     | (Demo).mp3    |               |               |             |          |
+| >f+++++++ | Temple    | of    | the           | Dog/Temple | Of    | The       | Dog       | (Deluxe | Edition)/06. | Times   | Of      | Trouble       | (25th         | Anniversary   | Mix).mp3    |          |
+| >f+++++++ | Temple    | of    | the           | Dog/Temple | Of    | The       | Dog       | (Deluxe | Edition)/07. | Times   | Of      | Trouble       | (Instrumental | Demo).mp3     |             |          |
+| >f+++++++ | Temple    | of    | the           | Dog/Temple | Of    | The       | Dog       | (Deluxe | Edition)/07. | Wooden  | Jesus   | (25th         | Anniversary   | Mix).mp3      |             |          |
+| >f+++++++ | Temple    | of    | the           | Dog/Temple | Of    | The       | Dog       | (Deluxe | Edition)/08. | Say     | Hello   | 2             | Heaven        | (Outtake).mp3 |             |          |
+| >f+++++++ | Temple    | of    | the           | Dog/Temple | Of    | The       | Dog       | (Deluxe | Edition)/08. | Your    | Savior  | (25th         | Anniversary   | Mix).mp3      |             |          |
+| >f+++++++ | Temple    | of    | the           | Dog/Temple | Of    | The       | Dog       | (Deluxe | Edition)/09. | Four    | Walled  | World         | (25th         | Anniversary   | Mix).mp3    |          |
+| >f+++++++ | Temple    | of    | the           | Dog/Temple | Of    | The       | Dog       | (Deluxe | Edition)/09. | Reach   | Down    | (Outtake).mp3 |               |               |             |          |
+| >f+++++++ | Temple    | of    | the           | Dog/Temple | Of    | The       | Dog       | (Deluxe | Edition)/10. | All     | Night   | Thing         | (25th         | Anniversary   | Mix).mp3    |          |
+| >f+++++++ | Temple    | of    | the           | Dog/Temple | Of    | The       | Dog       | (Deluxe | Edition)/10. | Pushin' | Forward | Back          | (Outtake).mp3 |               |             |          |
+| >f+++++++ | Temple    | of    | the           | Dog/Temple | Of    | The       | Dog       | (Deluxe | Edition)/11. | Say     | Hello   | 2             | Heaven        | (Alternate    | Mix).mp3    |          |
+| >f+++++++ | Temple    | of    | the           | Dog/Temple | Of    | The       | Dog       | (Deluxe | Edition)/11. | Wooden  | Jesus   | (Outtake).mp3 |               |               |             |          |
+| >f+++++++ | Temple    | of    | the           | Dog/Temple | Of    | The       | Dog       | (Deluxe | Edition)/12. | All     | Night   | Thing         | (Outtake).mp3 |               |             |          |
+| >f+++++++ | Temple    | of    | the           | Dog/Temple | Of    | The       | Dog       | (Deluxe | Edition)/12. | Wooden  | Jesus   | (Alternate    | Mix).mp3      |               |             |          |
+| >f+++++++ | Temple    | of    | the           | Dog/Temple | Of    | The       | Dog       | (Deluxe | Edition)/13. | All     | Night   | Thing         | (Alternate    | Mix).mp3      |             |          |
+|           |           |       |               |            |       |           |           |         |              |         |         |               |               |               |             |          |
+| sent      | 910924    | bytes | received      | 182        | bytes | 607404.0  | bytes/sec |         |              |         |         |               |               |               |             |          |
+| total     | size      | is    | 215873517071  | speedup    | is    | 236935.68 |           |         |              |         |         |               |               |               |             |          |
