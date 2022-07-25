@@ -4,6 +4,7 @@
 - Pictures/OtherPeoplesPics
 - Movies
 - Music/iTunes
+- Music/Collection
 - .cache
 - .gradle
 - .cordova
@@ -17,6 +18,7 @@
 - .rvm
 - .nvm
 - .Trash
+- .ghc
 - Documents/books/bookshelf
 - Library/Caches
 - .Trash
@@ -30,3 +32,7 @@
 - Library/Application Support/MobileSync/Backup/
 - Library/Containers/com.docker.docker/Data/
 - Library/Mail/
+- Library
+- Code
+- Downloads
+- Dropbox-Iain

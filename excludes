@@ -32,6 +32,10 @@
 - /backup/
 - /Pictures/OfflinePhotos
 
+- /Code/
+- /Downloads/
+- /Library/
+
 # This bit for backing up to Mimi
 # - /Pictures/Published
 # - /Pictures/Photos
